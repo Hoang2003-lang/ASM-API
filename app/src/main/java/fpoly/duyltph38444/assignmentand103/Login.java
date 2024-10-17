@@ -65,6 +65,20 @@ TextView tvSignUp;
 
             }
         });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String user = etEmail.getText().toString();
+                String pass = etPassword.getText().toString();
+                if (user.equals("Hoang") || pass.equals("123")){
+                    startActivity(new Intent(Login.this, NavigationBottom.class));
+                }
+                else {
+                    Toast.makeText(Login.this, "Mời nhập Gmail & PassWord", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
